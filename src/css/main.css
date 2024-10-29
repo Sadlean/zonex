@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Jost', sans-serif;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.swiper .swiper-pagination-bullet:not(.swiper-pagination-bullet-active){
+    scale: 0.3;
+    opacity: 0.5;
+    background-color: rgb(255, 255, 255);
+}
+
+.swiper .swiper-pagination-bullet {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+.swiper .swiper-pagination-bullet-active::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 6px;
+    width: 6px;
+    background-color: #000;
+    border-radius: 50%;
+}
